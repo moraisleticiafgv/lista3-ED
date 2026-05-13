@@ -2,11 +2,26 @@
 
 # Descrição do projeto:
 
-O sistema executa a criação de grupos de jogadores em um jogo online, a partir do nível de habilidade dos jogadores
+Implementacao de um sistema de matchmaking em C++ que armazena jogadores em uma fila de espera, os ordena por score e forma grupos de jogadores comniveis de habilidade semelhantes.
+A classe principal Matchmaking utiliza um array estatico de capacidade MAX_PLAYERS = 100000 e implementa dois algoritmos de ordenacao manualmente:
+Insertion Sort e Merge Sort.
 
-# Instruções de compilação:
+# Instruções de Compilação:
 
 O programa pode ser compilado com o comando: ```g++ main.cpp Matchmaking.cpp Player.cpp -o matchmaking```
 
-# Instruções de execução:
+# Instruções de Execução:
 Para executar, utilize o comando: ```./matchmaking```
+
+# Organização dos Arquivos
+```main.cpp```         – testes para todas as funcionalidades
+
+```Matchmaking.hpp```  – declaracao da classe Matchmaking
+
+```Matchmaking.cpp``` – implementacao da classe Matchmaking (ordenacao, formacao de grupos)
+
+```Player.hpp```       – declaracao da classe Player
+
+```Player.cpp```       – implementacao da classe Player
+
+```README.md```        – este arquivo
