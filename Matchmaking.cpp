@@ -56,7 +56,7 @@ void Matchmaking::sortByScoreInsertion() {
     }
 }
 
-static bool comesBefore(const Player& a, const Player& b) {
+bool Matchmaking::comesBefore(const Player& a, const Player& b) {
     if (a.getScore() != b.getScore())
         return a.getScore() < b.getScore();
     return a.getTimestamp() < b.getTimestamp();
@@ -74,7 +74,7 @@ void Matchmaking::merge(int mid, int left, int right){
     for (int j = 0; j < n2; j++) R[j] = players[mid + 1 + j];
  
     int i = 0, j = 0, k = left;
-    while (i < n1 || j < n2) {
+    while (i < n1 && j < n2) {
         if (comesBefore(L[i], R[j])) {
             players[k++] = L[i++];
         } else {

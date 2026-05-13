@@ -20,7 +20,7 @@ public:
     bool removePlayer(int id);
 
     void sortByScoreInsertion();
-    static bool comesBefore(const Player& a, const Player& b);
+    bool comesBefore(const Player& a, const Player& b);
     void merge(int mid, int left, int right);
     void mergeSort(int left, int right);
     void sortByScoreMerge();
@@ -30,8 +30,6 @@ public:
     Player *getWaitingPlayers(int *n);
 
     void printWaitingPlayers();
-
-    // Outros métodos auxiliares, se necessário
 };
 
 #endif
