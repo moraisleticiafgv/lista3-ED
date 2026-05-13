@@ -1,4 +1,4 @@
-# lista3-ED
+# Sistema de Matchmaking
 
 # Descrição do projeto:
 
