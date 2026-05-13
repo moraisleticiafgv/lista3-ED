@@ -20,8 +20,9 @@ public:
     bool removePlayer(int id);
 
     void sortByScoreInsertion();
-    void Matchmaking::merge(int mid, int left, int right);
-    void Matchmaking::mergeSort(int left, int right);
+    static bool comesBefore(const Player& a, const Player& b);
+    void merge(int mid, int left, int right);
+    void mergeSort(int left, int right);
     void sortByScoreMerge();
 
     Player *formGroup(int groupSize, int delta, int *n);
