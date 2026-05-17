@@ -138,7 +138,6 @@ Player* Matchmaking::formGroup(int groupSize, int delta, int* n) {
 Player* Matchmaking::getWaitingPlayers(int* n) {
     if (size == 0) {
         *n = 0;
-        std::cout << "Nenhum jogador aguardando\n";
         return nullptr;
     }
     Player* copy = new Player[size];

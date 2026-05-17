@@ -2,7 +2,7 @@
 
 # Descrição do projeto:
 
-Implementação de um sistema de matchmaking em C++ que armazena jogadores em uma fila de espera, os ordena por score e forma grupos de jogadores comn niveis de habilidade semelhantes.
+Implementação de um sistema de matchmaking em C++ que armazena jogadores em uma fila de espera, os ordena por score e forma grupos de jogadores com níveis de habilidade semelhantes.
 A classe principal Matchmaking utiliza um array estático de capacidade MAX_PLAYERS = 100000 e implementa dois algoritmos de ordenação manualmente:
 Insertion Sort e Merge Sort.
 
@@ -45,4 +45,4 @@ Os resultados dos testes serão exibidos no terminal.
 
 # Observação:
 
-Arrays retornador por `formGroup` e `getWaitingPlayers` devem ser liberados utilizando `delete[]`.
+Arrays retornados por `formGroup` e `getWaitingPlayers` devem ser liberados utilizando `delete[]`.

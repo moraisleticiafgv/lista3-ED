@@ -28,11 +28,15 @@ void testRemove() {
     mm.insert(Player(1, "Ana", 1200, 10));
     mm.insert(Player(2, "Carlos", 1300, 20));
     mm.insert(Player(3, "Julia", 1100, 30));
-
+    cout << "\nAntes da remoção:\n";
     mm.printWaitingPlayers();
 
     cout << "\nRemovendo Player 2...\n";
+    bool removed = mm.removePlayer(2);
 
+    cout << "Retorno de removePlayer(2): "
+    << (removed ? "true" : "false") << endl;
+    
     mm.printWaitingPlayers();
 }
 
