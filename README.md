@@ -13,6 +13,20 @@ O programa pode ser compilado com o comando: `g++ main.cpp Matchmaking.cpp Playe
 # Instruções de Execução:
 Para executar, utilize o comando: `./matchmaking`
 
+# Medição de tempo dos algoritmos de ordenação
+
+Além dos testes funcionais, o arquivo `teste_tempos.cpp` pode ser usado para medir e comparar o tempo de execução do Insertion Sort e do Merge Sort.
+
+Para compilar o programa de medição de tempo, utilize o comando:
+
+`g++ teste_tempos.cpp Matchmaking.cpp Player.cpp -o teste_tempos`
+
+Para executar a medição, utilize:
+
+`./teste_tempos`
+
+O programa imprime no terminal uma tabela com os tempos médios, em milissegundos, para diferentes quantidades de jogadores. Os mesmos dados de entrada são usados nos dois algoritmos para garantir uma comparação justa.
+
 # Organização dos Arquivos
 `main.cpp`         – testes para todas as funcionalidades
 
