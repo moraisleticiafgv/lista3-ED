@@ -93,7 +93,7 @@ void Matchmaking::mergeSort(int left, int right) {
     int mid = left + (right - left) / 2;
     mergeSort(left, mid);
     mergeSort(mid + 1, right);
-    merge(left, mid, right);
+    merge(mid, left, right);
 }
  
 void Matchmaking::sortByScoreMerge() {
@@ -138,6 +138,7 @@ Player* Matchmaking::formGroup(int groupSize, int delta, int* n) {
 Player* Matchmaking::getWaitingPlayers(int* n) {
     if (size == 0) {
         *n = 0;
+        std::cout << "Nenhum jogador aguardando\n";
         return nullptr;
     }
     Player* copy = new Player[size];

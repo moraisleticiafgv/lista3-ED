@@ -13,6 +13,10 @@ void testInsert() {
     Player p2(2, "Carlos", 1300, 20);
     Player p3(3, "Julia", 1100, 30);
 
+    mm.insert(p1);
+    mm.insert(p2);
+    mm.insert(p3);
+
     mm.printWaitingPlayers();
 }
 
@@ -28,7 +32,6 @@ void testRemove() {
     mm.printWaitingPlayers();
 
     cout << "\nRemovendo Player 2...\n";
-    cout << mm.removePlayer(2) << endl;
 
     mm.printWaitingPlayers();
 }
@@ -107,6 +110,34 @@ void testFormGroup() {
     mm.printWaitingPlayers();
 }
 
+void testFormGroupFail(){
+    cout << "\n=== TEST FORM GROUP FAIL ===\n";
+
+    Matchmaking mm;
+
+    mm.insert(Player(1, "Ana", 1000, 1));
+    mm.insert(Player(2, "Carlos", 1100, 2));
+    mm.insert(Player(3, "Julia", 1250, 3));
+
+    mm.sortByScoreInsertion();
+
+    cout << "\nAntes de tentar formar grupo:\n";
+    mm.printWaitingPlayers();
+
+    int n = 0;
+
+    Player* group = mm.formGroup(3, 50, &n);
+
+    if (group == nullptr && n == 0) {
+        cout << "Nenhum grupo válido foi formado.\n";
+    }
+
+    cout << "\nDepois da tentativa:\n";
+    mm.printWaitingPlayers();
+
+    delete[] group;
+}
+
 void testGetWaitingPlayers() {
     cout << "\n=== TEST GET WAITING PLAYERS ===\n";
 
@@ -114,6 +145,25 @@ void testGetWaitingPlayers() {
 
     mm.insert(Player(1, "Ana", 1000, 10));
     mm.insert(Player(2, "Carlos", 1200, 20));
+
+    int n = 0;
+
+    Player* waiting = mm.getWaitingPlayers(&n);
+
+    for (int i = 0; i < n; i++) {
+        cout << waiting[i].getName()
+             << " - "
+             << waiting[i].getScore()
+             << endl;
+    }
+
+    delete[] waiting;
+}
+
+void testGetWaitingPlayersEmpty() {
+    cout << "\n=== TEST GET WAITING PLAYERS EMPTY===\n";
+
+    Matchmaking mm;
 
     int n = 0;
 
@@ -141,7 +191,11 @@ int main() {
 
     testFormGroup();
 
+    testFormGroupFail();
+
     testGetWaitingPlayers();
+
+    testGetWaitingPlayersEmpty();
 
     return 0;
 }
