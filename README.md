@@ -36,7 +36,9 @@ O programa imprime no terminal uma tabela com os tempos médios, em milissegundo
 
 `Player.hpp`      – declaração da classe Player
 
-`Player.cpp`       – implementação da classe Player
+`Player.cpp`       – implementação da classe Player´
+
+`teste_tempos.cpp`  - mede os tempos de execução dos algoritmos de ordenação Insertion Sort e Merge Sort.
 
 `README.md`            – este arquivo
 
