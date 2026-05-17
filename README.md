@@ -16,13 +16,13 @@ Para executar, utilize o comando: `./matchmaking`
 # Organização dos Arquivos
 `main.cpp`         – testes para todas as funcionalidades
 
-`Matchmaking.hpp`  – declaracao da classe Matchmaking
+`Matchmaking.hpp`  – declaração da classe Matchmaking
 
-`Matchmaking.cpp` – implementacao da classe Matchmaking (ordenacao, formacao de grupos)
+`Matchmaking.cpp` – implementação da classe Matchmaking (ordenação, formação de grupos)
 
-`Player.hpp`      – declaracao da classe Player
+`Player.hpp`      – declaração da classe Player
 
-`Player.cpp`       – implementacao da classe Player
+`Player.cpp`       – implementação da classe Player
 
 `README.md`            – este arquivo
 
