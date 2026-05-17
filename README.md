@@ -42,3 +42,7 @@ O programa executará automaticamente os testes dos principais métodos da class
 - listagem de jogadores em espera.
 
 Os resultados dos testes serão exibidos no terminal.
+
+# Observação:
+
+Arrays retornador por `formGroup` e `getWaitingPlayers` devem ser liberados utilizando `delete[]`.
