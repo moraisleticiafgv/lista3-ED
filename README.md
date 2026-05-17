@@ -2,8 +2,8 @@
 
 # Descrição do projeto:
 
-Implementacao de um sistema de matchmaking em C++ que armazena jogadores em uma fila de espera, os ordena por score e forma grupos de jogadores comniveis de habilidade semelhantes.
-A classe principal Matchmaking utiliza um array estatico de capacidade MAX_PLAYERS = 100000 e implementa dois algoritmos de ordenacao manualmente:
+Implementação de um sistema de matchmaking em C++ que armazena jogadores em uma fila de espera, os ordena por score e forma grupos de jogadores comn niveis de habilidade semelhantes.
+A classe principal Matchmaking utiliza um array estático de capacidade MAX_PLAYERS = 100000 e implementa dois algoritmos de ordenação manualmente:
 Insertion Sort e Merge Sort.
 
 # Instruções de Compilação:
@@ -38,6 +38,7 @@ O programa executará automaticamente os testes dos principais métodos da class
 - ordenação com Insertion Sort;
 - ordenação com Merge Sort;
 - formação de grupos;
+- tentativa de formação de grupos sem sucesso;
 - listagem de jogadores em espera.
 
 Os resultados dos testes serão exibidos no terminal.
